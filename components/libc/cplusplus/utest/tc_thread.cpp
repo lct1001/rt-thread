@@ -21,8 +21,7 @@ static void test_thread(void)
     int count = 0;  // Initialize a counter to zero.
 
     // Lambda function to increment the count.
-    auto func = [&]() mutable
-    {
+    auto func = [&]() mutable {
         for (int i = 0; i < 100; ++i)
         {
             ++count;  // Increment the count 100 times.
@@ -60,19 +59,19 @@ static void test_thread(void)
 
 static rt_err_t utest_tc_init(void)
 {
-    return RT_EOK;  
+    return RT_EOK;
 }
 /**
  * @brief Test case cleanup function.
  */
 static rt_err_t utest_tc_cleanup(void)
 {
-    return RT_EOK;  
+    return RT_EOK;
 }
 
 /**
  * @brief Main test case function that runs the test.
- */ 
+ */
 static void testcase(void)
 {
     UTEST_UNIT_RUN(test_thread);
